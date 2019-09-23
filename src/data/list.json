@@ -1,0 +1,42 @@
+[
+    {
+      "id": "5d836824d5cf19270fcd62e1",
+      "picture": "http://placehold.it/32x32",
+      "age": 31,
+      "eyeColor": "blue",
+      "name": "Delgado Carpenter",
+      "gender": "male"
+    },
+    {
+      "id": "5d8368240596432aa9412a9a",
+      "picture": "http://placehold.it/32x32",
+      "age": 28,
+      "eyeColor": "green",
+      "name": "Rhonda Buckner",
+      "gender": "female"
+    },
+    {
+      "id": "5d8368241a38c6dc5898c693",
+      "picture": "http://placehold.it/32x32",
+      "age": 28,
+      "eyeColor": "blue",
+      "name": "House Camacho",
+      "gender": "male"
+    },
+    {
+      "id": "5d836824acccd9e8cca52598",
+      "picture": "http://placehold.it/32x32",
+      "age": 27,
+      "eyeColor": "brown",
+      "name": "Celeste Warren",
+      "gender": "female"
+    },
+    {
+      "id": "5d8368249a504aa1d39b4bc9",
+      "picture": "http://placehold.it/32x32",
+      "age": 33,
+      "eyeColor": "blue",
+      "name": "Lola Hartman",
+      "gender": "female"
+    }
+  ]
