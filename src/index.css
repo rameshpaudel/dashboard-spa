@@ -11,8 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
+.active{
+  color: red;
+  background: yellow !important;
+}
 .main-nav{
   margin: 0;
   margin-bottom: 20px;

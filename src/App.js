@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Routes, Link } from 'react-router-dom'
+import { BrowserRouter as Routes, NavLink } from 'react-router-dom'
 import AllRoutes from './routes'
 import './index.css'
 import 'bulma/css/bulma.css'
@@ -11,16 +11,19 @@ function App() {
       <Routes>
         <ul className="main-nav">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink exact={true} className="green" to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/service">Service</Link>
+            <NavLink to="/service">Service</NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <NavLink to="/login">Login</NavLink>
+          </li>
+          <li>
+            <NavLink to="/logout">LogOut</NavLink>
           </li>
         </ul>
         <AllRoutes />
