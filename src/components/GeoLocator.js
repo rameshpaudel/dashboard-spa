@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
 
-export default class NetworkImage extends Component {
+export default class GeoLocator extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoading: true,
             networkStatus: "",
-            response: []
+            response: [],
+            request: ''
         }
     }
 
 
-
+    onInputHandle = (event) => {
+        
+        this.setState({ request: event.target.value })
+    }
+    // 
     //Get the network info
     fetchFromNetwork = () => {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:3000/test.json");
+        xhr.open("GET", `http://api.geonames.org/searchJSON?q=${this.state.request}&maxRows=10&username=test`);
         xhr.send();
-        console.log("XHR", xhr)
+    
         xhr.onload = (event) => {
 
 
@@ -34,9 +39,10 @@ export default class NetworkImage extends Component {
         const { isLoading, networkStatus, response } = this.state;
 
         return (
-            <div style={{flex:1, padding: "10px"}}>
+            <div>
                 <h3>{networkStatus}</h3>
-                <button onClick={this.fetchFromNetwork  }>Load From Network</button>
+                <input onChange={this.onInputHandle} placeholder="search datas" />
+                <button onClick={this.fetchFromNetwork}>Load From Network</button>
                 {isLoading ? (
                     <div>
                         <h1>Loading....</h1>
@@ -44,15 +50,7 @@ export default class NetworkImage extends Component {
                     </div>
                 ) : (
                         <div className="columns">
-                            {response.map((value, index) => {
-                                return (
-                                    <div class="column">
-                                        <img src="https://placeimg.com/200/200/nature" />
-                                        <p>{value.name}</p>
-                                        <p>{value.age}</p>
-                                    </div>
-                                )
-                            })}
+                            {JSON.stringify(response)}
                         </div>
                     )}
             </div>

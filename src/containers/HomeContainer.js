@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import NetworkImage from '../components/Image';
+import GeoLocator from '../components/GeoLocator';
 
 const list = require('../data/list.json')
 export default class HomeContainer extends React.Component {
@@ -23,7 +24,7 @@ export default class HomeContainer extends React.Component {
                 <h1>Home Page</h1>
                 {list.map((value, index) => {
                     return (
-                        <p>{value.name}</p>
+                        <p key={index}>{value.name}</p>
                     )
                 })}
                 <div className="columns">
@@ -38,8 +39,11 @@ export default class HomeContainer extends React.Component {
                     </div>
                 </div>
 
-                <div>
+                <div className="column">
                     <NetworkImage />
+                </div>
+                <div className="column">
+                    <GeoLocator />
                 </div>
             </div>
         )

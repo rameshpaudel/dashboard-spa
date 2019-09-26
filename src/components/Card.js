@@ -26,7 +26,7 @@ export default function Card() {
       Phasellus nec iaculis mauris. <a>@bulmaio</a>.
       <a href="#">#css</a> <a href="#">#responsive</a>
                     <br />
-                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                 </div>
             </div>
         </div>
