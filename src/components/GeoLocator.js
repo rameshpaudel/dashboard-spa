@@ -18,20 +18,22 @@ export default class GeoLocator extends Component {
     }
     // 
     //Get the network info
-    fetchFromNetwork = () => {
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", `http://api.geonames.org/searchJSON?q=${this.state.request}&maxRows=10&username=test`);
-        xhr.send();
+    fetchFromNetwork = async () => {
+        var netRequest = await fetch(`http://api.geonames.org/searchJSON?q=${this.state.request}&maxRows=10&username=rpaudel58`)
+        console.log(netRequest.json())
+        // const xhr = new XMLHttpRequest();
+        // xhr.open("GET", );
+        // xhr.send();
     
-        xhr.onload = (event) => {
+        // xhr.onload = (event) => {
 
 
-            console.log("The response from network", xhr.responseText)
-            const parsedResponse = JSON.parse(xhr.responseText);
+        //     console.log("The response from network", xhr.responseText)
+        //     const parsedResponse = JSON.parse(xhr.responseText);
 
-            this.setState({ isLoading: false, networkStatus: xhr.status, response: parsedResponse })
-            console.log("The response from dynamic ready State", xhr.readyState, " on the network", xhr.responseText)
-        }
+        //     this.setState({ isLoading: false, networkStatus: xhr.status, response: parsedResponse })
+        //     console.log("The response from dynamic ready State", xhr.readyState, " on the network", xhr.responseText)
+        // }
     }
 
     render() {

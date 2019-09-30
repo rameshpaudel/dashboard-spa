@@ -23,6 +23,9 @@ function App() {
             <NavLink to="/login">Login</NavLink>
           </li>
           <li>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
+          <li>
             <NavLink to="/logout">LogOut</NavLink>
           </li>
         </ul>

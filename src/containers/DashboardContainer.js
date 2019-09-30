@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../components/Card';
+import UserList from '../components/UserList';
 
 export default class HomeContainer extends React.Component {
     constructor(props) {
@@ -14,15 +15,7 @@ export default class HomeContainer extends React.Component {
                 <h1>Dashboard Page</h1>
                 
                 <div className="columns">
-                    <div className="column is-one-quarter">
-                        <Card />
-                    </div>
-                    <div className="column is-one-quarter">
-                        <Card />
-                    </div>
-                    <div className="column is-one-quarter">
-                        <Card />
-                    </div>
+                    <UserList />
                     
                     
                 </div>
